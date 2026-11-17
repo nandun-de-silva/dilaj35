@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Dilaj//35th Anniversary//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dilaj-35th-anniversary-20261212@thedilaj
+DTSTAMP:20261117T000000Z
+DTSTART:20261212T120000Z
+DTEND:20261212T150000Z
+SUMMARY:The Dilaj 35th Anniversary VIP Celebration
+LOCATION:The Dilaj\, No. 27\, Uyana Road\, Moratuwa\, Sri Lanka
+DESCRIPTION:Hosted by Mr. Ajith Cooray and the family of The Dilaj. 5:30 PM onwards. By invitation only.
+Kindly reply: 011 264 6464
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:The Dilaj 35th Anniversary tomorrow at 5:30 PM
+END:VALARM
+END:VEVENT
+END:VCALENDAR
