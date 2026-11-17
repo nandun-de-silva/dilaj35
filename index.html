@@ -24,7 +24,7 @@
 <link rel="preload" href="logo.png" as="image">
 <!--
   THE DILAJ — 35th Anniversary VIP Celebration · web invitation (v2 "Imperial Gate")
-  Personal link: ?g=<base64url of the guest's name>  (made by "Link Maker.html")  ·  ?name=Mr.%20X also works
+  Personal link: ?to=Mr-Shehantha-Fernando (made by "Link Maker.html"; "--" = real hyphen) · old ?g=<base64url> and ?name= still work
   Flow: lanterns + closed gate with "Dear <name> · Tap to open" -> tap: gong + music, doors swing open,
         ivory card writes itself, red 35 seal -> RSVP button + details (countdown, calendar, directions, call).
 -->
@@ -374,7 +374,8 @@
       return new TextDecoder().decode(bytes);
     } catch (e) { return ''; }
   }
-  const GUEST = ((Q.get('g') ? fromB64(Q.get('g')) : Q.get('name')) || '').replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 60);
+  const fromSlug = s => s.replace(/--/g, '').replace(/-/g, ' ').replace(//g, '-');   // ?to=Mr-Shehantha-Fernando ("--" = a real hyphen)
+  const GUEST = ((Q.get('to') ? fromSlug(Q.get('to')) : Q.get('g') ? fromB64(Q.get('g')) : Q.get('name')) || '').replace(/[\u0000-\u001f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 60);
   const AUTO = Q.has('auto');
   const $ = id => document.getElementById(id);
   const root = document.documentElement;
